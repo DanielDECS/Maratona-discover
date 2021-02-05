@@ -115,21 +115,21 @@ const DOM = {
 
 const Utils = {
     formatAmount(value){
-        value = value * 100;  
-        return Math.round(value);
+        value = value * 100  
+        return Math.round(value)
     },
 
     formatDate(date) {
-        const splittedDate = date.split("-");
-        return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`;
+        const splittedDate = date.split("-")
+        return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
     },
 
     formatCurrency(value) {
-        const signal = Number(value) < 0 ? "-" : "";
+        const signal = Number(value) < 0 ? "-" : ""
 
-        value = String(value).replace(/\D/g, "");
+        value = String(value).replace(/\D/g, "")
 
-        value = Number(value) / 100;
+        value = Number(value) / 100
 
         value = value.toLocaleString("pt-BR", {
             style: "currency",
@@ -138,7 +138,7 @@ const Utils = {
 
        return signal + value;
     }
-};
+}
 
 const Form = {
     description: document.querySelector('input#description'),
